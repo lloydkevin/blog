@@ -1,0 +1,34 @@
+<?php include(TEMPLATEPATH."/config.inc.php");?>
+
+<div id="subheader">
+
+<div class="subheader_popular">
+<h2>Popular</h2>
+	<ul>
+		<?php $result = $wpdb->get_results("SELECT comment_count,ID,post_title FROM $wpdb->posts ORDER BY comment_count DESC LIMIT 0 , 6");
+		foreach ($result as $topten) {
+		$postid = $topten->ID;
+		$title = $topten->post_title;
+		$commentcount = $topten->comment_count; 
+		if ($commentcount != 0) { ?>
+		<li><a href="<?php echo get_permalink($postid); ?>" title="<?php echo $title ?>"><?php echo $title ?></a></li>
+		<?php } } ?> 
+	</ul>
+</div>
+
+<?php include(TEMPLATEPATH."/resources.php");?>
+
+<div class="subheader_subscribe">
+<h2>Subscribe</h2>
+<ul>
+<li><a href="<?php if($db_feedburner_address) { echo $db_feedburner_address; } else { bloginfo('rss2_url'); }?>"><img src="<?php bloginfo('template_url'); ?>/images/rss.gif" alt="Subscribe" /></a></li>
+<li>
+<form style="margin:0px;  text-align:left;" action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com/fb/a/emailverifySubmit?feedId=YOUR-ID-HERE', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+  <input type="text" name="email2" class="field" value="Subscribe via Email..." onfocus="if (this.value == 'Subscribe via Email...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Subscribe via Email...';}"/>
+  <input type="hidden" value="http://feeds.feedburner.com/~e?ffid=YOUR-ID-HERE" name="url"/><input type="hidden" value="" name="title"/><input type="hidden" name="loc" value="en_US"/><input name="submit" type="submit" class="button" value="SUBSCRIBE" />
+</form>
+</li>
+</ul>
+</div>
+
+</div>

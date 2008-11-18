@@ -1,0 +1,23 @@
+#FF7D01		background
+#E06F00		border
+#333		text
+#E06F00		block background
+#98C914		block link
+
+#F2C221		header link
+#D94616		header txt
+
+#ECECEC		content out
+#8FC400		block quoute
+
+#FF6000 		h1, h2, h3 link, search bg
+#666		hover
+
+#89A210		link, visited
+#8BC200		hover
+
+#666		post info txt
+#FFFCF9		back
+#73880A		link
+
+#555		sidebar txt

@@ -1,0 +1,2 @@
+If you don't like using the picture in the header just rename the 
+'header_with_text.php' into 'header.php' and you'll have the header with your blogname + description. 
