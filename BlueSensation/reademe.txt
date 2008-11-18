@@ -1,0 +1,7 @@
+If you want to use your logo, you just need to upload your image (titled blogtitle.jpg, and with dimensions of 420x60) to the "images" folder of the theme, and modify the style.css.
+
+Look for the line 15, which governs the H1 class on the header. It has the following code:
+
+.header h1 a { display: block; width: 420px; height: 60px; font: normal 45px 'Arial', 'Trebuchet MS', 'Verdana', sans-serif; text-transform: uppercase; letter-spacing: 1px; /* text-indent: -9999px; background: url(images/blogtitle.jpg) no-repeat top left; */ }
+
+Once you find that, you will just need to delete the /* and */ which are comment parameters.
