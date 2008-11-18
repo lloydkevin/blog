@@ -1,0 +1,221 @@
+  <div id="left_side">
+  
+  <?php if ( !function_exists('dynamic_sidebar')
+        || !dynamic_sidebar(1) ) : ?>
+		
+		
+		      <div class="block block-user">
+<?php if (function_exists('wp_theme_switcher')) { ?>
+
+<h3>Themes</h3>
+
+<?php wp_theme_switcher('dropdown'); ?>
+
+<?php } ?>
+   
+ </div>
+ 
+ 
+<div class="block block-node">
+		
+	 
+	 
+	 <?php
+
+$today = current_time('mysql', 1);
+
+if ( $recentposts = $wpdb->get_results("SELECT ID, post_title FROM $wpdb->posts WHERE post_status = 'publish' AND post_date_gmt < '$today' ORDER BY post_date DESC LIMIT 7")):
+
+?>
+
+<h3><?php _e("Recent Posts"); ?></h3>
+
+<ul>
+
+<?php
+
+foreach ($recentposts as $post) {
+
+if ($post->post_title == '')
+
+$post->post_title = sprintf(__('Post #%s'), $post->ID);
+
+echo "<li><a href='".get_permalink($post->ID)."'>";
+
+the_title();
+
+echo '</a></li>';
+
+}
+
+?>
+
+</ul>
+
+<?php endif; ?>
+
+</div>
+
+
+
+      <div class="block block-user">
+
+<h3>Make Money Online</h3>
+<p><a href="javascript:show_direct_form(12777,'http://www.howisavemoney.net', 'tl')">Hire Me via PayPerPost Direct!</a>
+</p>
+ 
+<p><a href="http://www.blogsvertise.com/?rid=b551">Click Here to Advertise on My Blog</a>
+</p>
+<p>
+<a href="http://cashduck.com/members/register.php?ref=lulugal11"> Join Cash Duck</a>
+</p>
+
+<p><a href="http://www.dealbarbiepays.com/members/register.php?ref=lulugal11">Join DealBarbie</a>
+</p>
+
+<p><a href="http://www.agloco.com/r/BBBL5480"> Join my AGLOCO network</a></p>
+<p><a href="https://www.paypal.com/us/mrb/pal=528LA3QHWBS7W">Get 5.04% interest with PayPal</a></p>
+
+<p><a href="http://www.text-link-ads.com/starter_kit.php?ref=68488">$100 in FREE Links</a>
+</p>
+
+<p><script type="text/javascript" src="http://tinyurl.com/yba4m8"></script>
+</p>
+
+<p><a href="http://www.reviewme.com/Money-C53/Save-Money-17974.html?ref=3823"><img src="http://www.reviewme.com/images/ads/affiliate_a_60_160x150.png" border="0" /></a>
+</p>
+
+<h3> Try Joost</h3>
+<p><a href="http://www.joost.com/" title="Joost&trade; the best of tv and the internet"><img src="http://banners.joost.com/joost_002_en_120x90.jpg" alt="Joost&trade; the best of tv and the internet"/></a></p>
+
+
+<h3>Ranking</h3>
+<a href="http://www.prchecker.info/" target="_blank">
+<img src="http://www.prchecker.info/www.howisavemoney.net-pagerank-2.gif" alt="Checking Page Ranking" border="0" /></a>
+
+	
+  <h3>Archives</h3>
+
+<ul>
+<?php wp_get_archives('type=monthly'); ?>
+
+</ul>
+  
+   
+ </div>
+ 
+<!-- Top Commentors -->
+<?php if(function_exists('ns_show_top_commentators')) { ?>
+<div class="block block-user">
+	<h3>Top Commentors</h3>
+	<ul><?php ns_show_top_commentators(); ?></ul>
+</div>
+<?php } ?>
+<!-- Top Commentors -->
+ 
+ 
+ <!--
+      <div class="block block-user">
+ 
+
+ <h3><?php _e('Meta:'); ?></h3>
+
+<ul>
+
+<li><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Syndicate this site using RSS'); ?>"><?php _e('<abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
+
+<li><a href="<?php bloginfo('comments_rss2_url'); ?>" title="<?php _e('The latest comments to all posts in RSS'); ?>"><?php _e('Comments <abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
+
+<li><a href="http://validator.w3.org/check/referer" title="<?php _e('This page validates as XHTML 1.0 Transitional'); ?>"><?php _e('Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr>'); ?></a></li>
+
+<li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a></li>
+
+<?php wp_meta(); ?>
+
+</ul>
+
+ </div>
+-->
+   
+ <h3>Other Stuff</h3>
+<p> 
+   <div align=center>
+<!-- Site Meter XHTML Strict 1.0 -->
+<script type="text/javascript" src="http://s28.sitemeter.com/js/counter.js?site=s28lulugal11">
+</script>
+<!-- Copyright (c)2006 Site Meter -->
+</div></p>
+
+
+<!--<p><div align=center><a href="http://www.prchecker.info/" target="_blank">
+<img src="http://www.prchecker.info/PR1_img.gif" alt="Display Page Rank Icon" border="0" /></a>
+</div></p>-->
+
+
+<h3>Loud Launch</h3>
+
+<p><a href="http://lulugal.kevinlloyd.net/2007/03/04/automotive-advice-for-women-by-women/">Automotive Advice for Women by Women</a></p>
+
+<p><a href="http://lulugal.kevinlloyd.net/2007/02/12/billscoma-review/">Bills.com...a review</a></p>
+<p>
+<a href="http://lulugal.kevinlloyd.net/2007/02/02/marqsmen-launches-new-webstore/">Marqsmen launches new webstore</a>
+</p>
+
+<p> <a href="http://lulugal.kevinlloyd.net/2007/01/15/electronics-warehouse/"> Electronics warehouse</a></p>
+
+<p> <a href="http://lulugal.kevinlloyd.net/2007/01/04/fuel-my-blog/">Fuel My Blog</a></p>
+
+<p><a href="http://lulugal.kevinlloyd.net/2007/01/02/loud-launch-has-finally-launched/">Loud Launch has finally launched</a>	</p>
+
+
+<h3>Places to check out</h3>
+
+<p><script type="text/javascript"><!--
+google_ad_client = "pub-8590368810104125";
+google_ad_width = 110;
+google_ad_height = 32;
+google_ad_format = "110x32_as_rimg";
+google_cpa_choice = "CAAQ7c2WhAIaCETpCEPuYoTVKPmNxXQ";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+<p>For cheap <a href="http://www.yourmotorinsurance.co.uk">motor insurance</a> why not visit Your Motor Insurance</p>
+
+<p>
+<a href="http://dir.blogflux.com/cat/personal.html">Directory of Personal Blogs</a></p>
+
+<p><a href="http://www.blogarama.com/" title=\"Blogarama - The Blog Directory\" >Blogarama</a></p>
+
+<p><a href="http://www.preferredticket.com/Las_Vegas_Shows_Tickets.aspx">Las Vegas Shows & Concert Tickets</a></p>
+
+<p><div><a href="mailto:lulugal11@gmail.com">Email Me</a></div></p>
+
+
+
+<script type="text/javascript" src="http://embed.technorati.com/embed/k46464jwjv.js"></script>
+
+
+<h3>More Randomness</h3>
+<p>
+<div align=center>
+<div style="border: 1px solid #cccccc; background-color: white; width: 115px; text-align: center; padding: 0 0 10px 0;"><p style="margin: 0"><img src="http://static.flickr.com/23/25822676_789bf55448_t.jpg" style="border:0;"><br /> 		<span style="font-size: 11px;">My <a href="http://howisavemoney.net">blog</a> is worth <b>$15,242.58</b>.</span><br /><span style="font-size: 10px;"><a href="http://www.business-opportunities.biz/projects/how-much-is-your-blog-worth/">How much is your blog worth?</a></span></p><p><a href="http://www.technorati.com/" style="border: 0px;"><img src="http://technorati.com/pix/tech-logo-embed.gif" style="border: 0px;"></a></p></div>
+</div>
+</p>
+
+<p><script language="javascript" type="text/javascript" src="http://www.networthiq.com/api/badge.ashx?u=lulugal11&h=150&w=140&c=FFFFFF"></script></p>
+
+<p>
+<div align=center>
+<a href="http://www.squidoo.com/lulugal11money"><img src="http://images.squidu.com/buttons/banners/banner02.gif" alt="Check out my lens" style="border: 0" /></a>
+</div>
+</p>
+
+  <?php endif; ?>
+  
+  </div>
+  
+
+
