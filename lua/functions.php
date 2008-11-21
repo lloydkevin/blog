@@ -167,5 +167,6 @@ if ($value['type'] == "text") { //If we have configured this for text options ..
 
 <?php
 }
-add_action('admin_menu', 'mytheme_add_admin'); 
+add_action('admin_menu', 'mytheme_add_admin');
+remove_action('wp_head', 'wp_generator');
 ?>

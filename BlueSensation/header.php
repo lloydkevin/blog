@@ -32,7 +32,7 @@
 		
 	<div class="menu">
 		<ul>
-			<li class="page_item<?php if (is_home() || is_single()) {echo ' current_page_item';} ?>"><a href="<?php bloginfo('url'); ?>">Homepage</a></li>
+			<li class="page_item<?php if (is_home() || is_single()) {echo ' current_page_item';} ?>"><a href="<?php bloginfo('url'); ?>">Home</a></li>
 			<?php wp_list_pages('sort_column=menu_order&title_li=&depth=1'); ?>
 			<div style="clear:both;"></div>
 		</ul>
