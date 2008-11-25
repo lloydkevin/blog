@@ -225,9 +225,10 @@ padding:10px 10px 0;
 
 .comment p.line
 {
-background: url(img/clow.gif) no-repeat;
+background: #fff url(img/clow.gif) no-repeat;
 padding-left:55px;
 padding-top:17px;
+clear:both;
 }
 
 h5 { font-size:1.4em; }
@@ -308,12 +309,13 @@ float:right;
 margin: 5px;
 }
 
-.mycomment div{
-background: #fffccc;
+.mycomment{
+background: #fffccc url(img/my_ctop.gif) no-repeat;
 }
 
 .mycomment p.line {
-background: url(img/my_clow.gif) no-repeat;
+background: #fff url(img/my_clow.gif) no-repeat;
+clear:both;
 }
 #wp125adwrap_1c { width:100%; }
 #wp125adwrap_1c .wp125ad { margin-bottom:10px; }
