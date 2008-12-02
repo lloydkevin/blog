@@ -6,10 +6,14 @@
 <head profile="http://gmpg.org/xfn/11">
 <title><?php if (is_single() || is_page() || is_archive()) { wp_title('',true); } else { bloginfo('name'); echo(' &#8212; '); bloginfo('description'); } ?></title>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><!-- Page stylesheet -->
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver.1" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_head(); ?>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo-1.4.0-min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.localscroll-1.2.6-min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.serialScroll-1.2.1-min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/coda.js"></script>
 </head>
 <body>
 <div id="header">

@@ -108,10 +108,9 @@ margin: 0 auto;
 width:600px;
 float:left;
 margin-top:50px;
+margin-right:10px;
 margin-bottom:20px;
 height:auto;
-margin-left:15px;
-padding-left:30px;
 text-align: left;
 }
 
@@ -160,8 +159,8 @@ color:#BBBBBB;
 /* Sidebar */
 #sidebar {
 float:right;
-width:275px;
-margin-left:8px;
+width:360px;
+margin-left:10px;
 height:100%;
 margin-top:50px;
 margin-bottom:20px;
@@ -323,3 +322,72 @@ clear:both;
 /* Styles for two-column display */
 #wp125adwrap_2c { width:100%; }
 #wp125adwrap_2c  .wp125ad { width:125px; float:left; padding:3px; }
+
+/* Coda Slider */
+#slider {
+  width: 360px;
+  margin: 7px auto;
+  position: relative;
+}
+
+.scroll {
+  /*height: 300px;*/
+  overflow: auto;
+  position: relative; /* fix for IE to respect overflow */
+  clear: left;
+  background: #FFFFFF url(images/content_pane-gradient.gif) repeat-x scroll left bottom;
+}
+
+.scrollContainer .panel {
+  padding: 5px;
+  /*height: 300px;*/
+  width: 360px; /* change to 560px if not using JS to remove rh.scroll */
+}
+ul.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
+}
+
+ul.navigation li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#slider ul.navigation li  h2{
+display:inline;
+font-size: 1.2em;
+}
+
+ul.navigation a {
+    /*padding: 10px;*/
+    color: #000;
+    text-decoration: none;
+}
+
+ul.navigation a:hover {
+    text-decoration: underline;
+}
+
+ul.navigation a.selected {
+    text-decoration: underline;
+}
+
+ul.navigation a:focus {
+    outline: none;
+}
+
+.scrollButtons {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: -20px;
+}
+
+.scrollButtons.right {
+    right: -20px;
+}
