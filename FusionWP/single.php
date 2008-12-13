@@ -31,7 +31,7 @@
 					</span>
 <div id="comtemp">
 
-			<?php comments_template(); ?>
+			<?php comments_template('', true); ?>  
 </div>
 			<?php endwhile; else: ?>
 			<p>Sorry, no posts matched your criteria.</p>
