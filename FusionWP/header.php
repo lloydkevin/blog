@@ -11,6 +11,15 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php if ( is_single() ) wp_enqueue_script( 'comment-reply' );?>
 <?php wp_head(); ?>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/tabs.js"></script>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/tabs.css" type="text/css" media="screen" /><!-- Page stylesheet -->
+<script>
+/*jQuery.noConflict();*/
+jQuery(document).ready(function(){
+  jQuery("#tabs > ul").tabs({ fx: { height: 'toggle', opacity: 'toggle' } });
+});
+</script>
+
 </head>
 <body>
 <div id="header">

@@ -106,13 +106,11 @@ margin: 0 auto;
 }
 
 #content {
-width:600px;
+width:640px;
 float:left;
 margin-top:50px;
 margin-bottom:20px;
 height:auto;
-margin-left:15px;
-padding-left:30px;
 text-align: left;
 }
 
@@ -161,8 +159,8 @@ color:#BBBBBB;
 /* Sidebar */
 #sidebar {
 float:right;
-width:275px;
-margin-left:8px;
+width:320px;
+margin-left:20px;
 height:100%;
 margin-top:50px;
 margin-bottom:20px;
@@ -329,3 +327,5 @@ clear:both;
 /* Styles for two-column display */
 #wp125adwrap_2c { width:100%; }
 #wp125adwrap_2c  .wp125ad { width:125px; float:left; padding:3px; }
+
+.ui-tabs-hide { display: none; }
