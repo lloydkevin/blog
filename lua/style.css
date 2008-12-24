@@ -288,22 +288,20 @@ a:hover.more-link{
 	padding:5px;
 	margin:0 0 15px 0;
 }
-ol#commentlist{
-	padding:0;
-	margin:0;
+ol.commentlist ul{
 	list-style-type:none;
 }
 .commentdate{
 	font-size:10px;
 	padding-left:0;
 }
-#commentlist li p{
+.commentlist li p{
 	margin-bottom:8px;
 	line-height:20px;
 	padding:0;
 }
 
-#commentlist li div{
+.commentlist li div{
 	overflow:auto;
 }
 .commentname{
@@ -314,13 +312,13 @@ ol#commentlist{
 .commentinfo{
 	clear:both;
 }
-.commenttext{
+.comment{
 	clear:both;
 	margin:0 0 10px 0;
 	padding:10px 10px 5px 10px;
 	background:#f0f6f8;
 }
-.commenttext-admin{
+.bypostauthor{
 	clear:both;
 	margin:0 0 10px 0;
 	padding:10px 10px 5px 10px;
@@ -330,19 +328,19 @@ ol#commentlist{
 #commentsformheader{
 	padding-left:0;
 }
-#commentsform{
+.commentsform{
 	text-align:center;
 	margin:0;
 	padding:0;
 }
-#commentsform form{
+.commentsform form{
 	text-align:left;
 	margin:0;
 }
-#commentsform p{
+.commentsform p{
 	margin:0;
 }
-#commentsform form textarea{
+#commentform textarea{
 	width:99%;
 	background:#fff;
 	border:1px solid #ddd;
@@ -352,6 +350,16 @@ p.comments_link img{
 	margin:0;
 	padding:0;
 }
+
+.comment .avatar{
+	float:right;
+	margin: 10px 8px 5px 8px;
+}
+
+.comment {
+	margin: 15px 0px 20px 0px;
+}
+.bypostauthor odd alt thread-odd thread-alt depth-1
 
 ul#recentcomments li{
 	display:block;

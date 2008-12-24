@@ -23,8 +23,7 @@
 	<!--
 	<?php trackback_rdf(); ?>
 	-->
-
-	<?php comments_template(); // Get wp-comments.php template ?>
+	<?php comments_template('', true); // Get wp-comments.php template?>
 	<?php endwhile; else: ?><?php endif; ?>
 	
 	<div class="prevnext">
