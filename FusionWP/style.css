@@ -3,12 +3,20 @@
 padding:0;
 margin:0;
 }
-p, pre, blockquote, label, fieldset, address { margin:1em 0; }
+p, pre, blockquote, label, fieldset, address { margin:1.4em 0; }
 body {
 font: 14px Arial, Helvetica, sans-serif;
 background:#FFF;
 color:#3D3D3D;
 line-height:1.6em;
+}
+
+h2 {
+font-size:1.5em;
+}
+
+h2, h3, h4, h5{
+	margin: 22px 0px 10px 0px;
 }
 
 a:link {
@@ -178,11 +186,6 @@ color:#6CAAE7;
 padding-bottom:12px;
 }
 
-#sidebar h2 {
-padding-top:10px;
-font-size:1.5em;
-}
-
 /*#sidebar ul,li { list-style-type:none; }*/
 #sidebar ul{ list-style-type:none; }
 .widget{ overflow: hidden; }
@@ -276,7 +279,6 @@ font-style: italic;
 
 #content ol, #content ul {
 padding-left:45px;
-list-style:none;
 }
 
 /* Flexible Upload */
@@ -327,5 +329,3 @@ clear:both;
 /* Styles for two-column display */
 #wp125adwrap_2c { width:100%; }
 #wp125adwrap_2c  .wp125ad { width:125px; float:left; padding:3px; }
-
-.ui-tabs-hide { display: none; }

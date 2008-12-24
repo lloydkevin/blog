@@ -4,3 +4,5 @@
 </div>
 </body>
 </html>
+<?php echo "<!-- Peak Memory: " . round( memory_get_peak_usage() / 1024, 2) . " KB -->"; ?>
+<!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->

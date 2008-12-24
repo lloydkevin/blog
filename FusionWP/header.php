@@ -5,16 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 <title><?php if (is_single() || is_page() || is_archive()) { wp_title('',true); } else { bloginfo('name'); echo(' &#8212; '); bloginfo('description'); } ?></title>
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><!-- Page stylesheet -->
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php if ( is_single() ) wp_enqueue_script( 'comment-reply' );?>
+<?php wp_enqueue_script('jquery');?>
 <?php wp_head(); ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/tabs.js"></script>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/tabs.css" type="text/css" media="screen" /><!-- Page stylesheet -->
 <script>
-/*jQuery.noConflict();*/
 jQuery(document).ready(function(){
   jQuery("#tabs > ul").tabs({ fx: { height: 'toggle', opacity: 'toggle' } });
 });
@@ -40,7 +40,7 @@ jQuery(document).ready(function(){
 		<li class="page_item">
 			<a title="Home" href="http://www.webdevelopment2.com/">Home</a>
 		</li>
-		<?php wp_list_pages('title_li='); ?>
+		<?php wp_list_pages('title_li=&exclude=456'); ?>
 		</ul>
 	</div>
 </div>

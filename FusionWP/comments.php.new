@@ -25,49 +25,6 @@ function list_pings($comment, $args, $depth) {
         <li id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?>
 <?php } ?>
 
-<?php
-function mytheme_comment($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-
-		<li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
-
-
-
-
-		<div class="commentmetadata">
-
-		<div class="comment<?php if ($comment->user_id == get_the_author_ID()) echo ' mycomment'; ?>">
-
-	<?php echo get_avatar($comment, 50) ?>
-		<div><?php comment_text() ?></div>
-
-
-		<p class="line">
-		<strong>
-
-		<?php comment_author_link() ?></strong>, <?php _e('on'); ?> <?php comment_date('F jS, Y') ?> <?php _e('at');?> <?php comment_time() ?></a> <?php edit_comment_link('[Manage]','',''); ?>
-		<?php comment_reply_link(array_merge( $args, array('add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?> 
-				<?php if ($comment->comment_approved == '0') : ?>
-				<em><?php _e('Your comment is awaiting moderation.'); ?></em>
-		 		<?php endif; ?>
-
-		</strong>
-		
-		</div>
-
-
-
-
-
-		<?php /* Changes every other comment to a different class */
-			if ('alt' == $oddcomment) $oddcomment = '';
-			else $oddcomment = 'alt';
-		?>
-
-<?php
-        }
-?>
-
 <div class="boxcomments">
 <h5 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h5>
 <?php
@@ -75,7 +32,7 @@ if (have_comments()) :
 	if (!empty($comments_by_type['comment'])) : ?>
 
 		<ol class="commentlist">
-			<?php wp_list_comments(array('avatar_size'=>40, 'type'=>'comment', 'callback'=>'mytheme_comment')); ?>
+			<?php wp_list_comments(array('avatar_size'=>40, 'type'=>'comment', 'callback'=>'list_pings')); ?>
 		</ol>
 	<?php endif;
 	if ( ! empty($comments_by_type['pings']) ) : ?>
