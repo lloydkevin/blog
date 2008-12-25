@@ -10,7 +10,7 @@
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php if ( is_single() ) wp_enqueue_script( 'comment-reply' );?>
-<?php wp_enqueue_script('jquery');?>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 <?php wp_head(); ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/tabs.js"></script>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/tabs.css" type="text/css" media="screen" /><!-- Page stylesheet -->
