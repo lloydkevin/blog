@@ -591,3 +591,6 @@ ul#recentcomments li{
 	margin:0 auto;
 	display:block;
 }
+
+img#wpstats{display:none}
+img#wpstats{width:0px;height:0px;overflow:hidden}
